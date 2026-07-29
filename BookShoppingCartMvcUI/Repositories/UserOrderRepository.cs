@@ -7,11 +7,11 @@ namespace BookShoppingCartMvcUI.Repositories
     {
         private readonly ApplicationDbContext _db;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly UserManager<IdentityUser> _userManager;
-
+        // private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         public UserOrderRepository(ApplicationDbContext db,
-            UserManager<IdentityUser> userManager,
+            UserManager<ApplicationUser> userManager,
              IHttpContextAccessor httpContextAccessor)
         {
             _db = db;
